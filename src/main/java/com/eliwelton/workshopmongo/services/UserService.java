@@ -30,6 +30,11 @@ public class UserService {
 		return repo.insert(obj);
 	}
 	
+	public void delete(String id) {
+		findById(id);
+		repo.deleteById(id);
+	}
+	
 	
 //implmentando o FROMDTO aqui porque : caso seja necessario uma operação para manuteção futura que ja tem acesso a dados
 	public User fromDTO(UserDTO objDto) {
